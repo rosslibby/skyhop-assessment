@@ -13,9 +13,16 @@ type Props = {
   children: ReactNode
   dismiss?: Action
   title: string
+  summary?: string
 }
 
-export default function Card({ action, children, dismiss, title }: Props) {
+export default function Card({
+  action,
+  children,
+  dismiss,
+  summary,
+  title,
+}: Props) {
   return (
     <div className={styles.card}>
       <Header>
@@ -25,10 +32,16 @@ export default function Card({ action, children, dismiss, title }: Props) {
         {children}
       </div>
       <Footer>
-        <h3>Data in the import file is correct. Please press Continue to import.</h3>
+        {summary && (
+          <h3>{summary}</h3>
+        )}
         <div className={styles.footerButtons}>
-          <button>Continue Import</button>
-          <button>Cancel</button>
+          {action && (
+            <button onClick={action.onClick}>{action?.label}</button>
+          )}
+          {dismiss && (
+            <button onClick={dismiss.onClick}>{dismiss?.label}</button>
+          )}
         </div>
       </Footer>
     </div>
