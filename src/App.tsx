@@ -82,11 +82,25 @@ function App() {
           </section>
 
           <section>
-            <label htmlFor="client">Client:</label>
-            <input type="radio" value="single" />
-            <label>Single</label>
-            <input type="radio" value="multiple" />
-            <label>Multiple</label>
+            <RadioGroup
+              onChange={() => null}
+              label="Client:"
+              name="client"
+              options={[
+                {
+                  id: 'single',
+                  checked: true,
+                  label: 'Single',
+                  value: 'single',
+                },
+                {
+                  id: 'multiple',
+                  checked: false,
+                  label: 'Multiple',
+                  value: 'multiple',
+                },
+              ]}
+            />
             <fieldset className={styles.dropdownFieldset}>
               <label htmlFor="testing-center-1">Testing Center 1</label>
               <select name="testing-center-1">
