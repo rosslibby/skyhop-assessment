@@ -1,21 +1,14 @@
 import { ChangeEvent, useState } from 'react'
 import styles from './select.module.css'
-import { InputValue } from 'types'
-
-type Option = {
-  default?: boolean
-  disabled?: boolean
-  name: string
-  value: InputValue
-}
+import { InputValue, SelectOption } from 'types'
 
 export const Select = ({ name, onChange, options }: {
   name: string
   onChange: (value: InputValue) => void
-  options: Option[]
+  options: SelectOption[]
 }) => {
   const [value, setValue] = useState<InputValue | undefined>(
-    options.find((option: Option) => option.default)?.value
+    options.find((option: SelectOption) => option.default)?.value
   )
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value
@@ -26,11 +19,11 @@ export const Select = ({ name, onChange, options }: {
   return (
     <select
       className={styles.select}
+      defaultValue={value}
       name={name}
       onChange={handleChange}
-      defaultValue={value}
     >
-      {options.map((option: Option, index: number) => (
+      {options.map((option: SelectOption, index: number) => (
         <option
           disabled={option.disabled}
           key={`${name}-opt-${index}`}
