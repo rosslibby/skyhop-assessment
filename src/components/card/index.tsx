@@ -26,11 +26,13 @@ export default function Card({
   return (
     <div className={styles.card}>
       <Header>
-        <h1>Document Upload</h1>
+        <h1>{title}</h1>
       </Header>
+
       <div className={styles.body}>
         {children}
       </div>
+
       <Footer>
         {summary && (
           <h3>{summary}</h3>
