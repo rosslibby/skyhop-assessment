@@ -41,6 +41,15 @@ function App() {
               <label>Elapse Data Checking:</label>
               <p>No Elapsed Dates!</p>
             </section>
+
+            <section>
+              <label htmlFor="tolerance">Tolerance Window:</label>
+              <input type="checkbox" name="tolerance" />
+              <span>{`Toggle ON`}</span>
+              <span>
+                <span>Select Tolerance Level</span>
+              </span>
+            </section>
           </section>
         </div>
 
