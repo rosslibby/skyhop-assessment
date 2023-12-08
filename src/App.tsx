@@ -80,6 +80,38 @@ function App() {
             <label>Location Checking:</label>
             <p>All Available!</p>
           </section>
+
+          <section>
+            <label htmlFor="client">Client:</label>
+            <input type="radio" value="single" />
+            <label>Single</label>
+            <input type="radio" value="multiple" />
+            <label>Multiple</label>
+            <fieldset className={styles.dropdownFieldset}>
+              <label htmlFor="testing-center-1">Testing Center 1</label>
+              <select name="testing-center-1">
+                <option disabled>Select Client</option>
+              </select>
+            </fieldset>
+            <fieldset className={styles.dropdownFieldset}>
+              <label htmlFor="testing-center-2">Testing Center 2</label>
+              <select name="testing-center-2">
+                <option disabled>Select Client</option>
+              </select>
+            </fieldset>
+            <fieldset className={styles.dropdownFieldset}>
+              <label htmlFor="testing-center-3">Testing Center 3</label>
+              <select name="testing-center-3">
+                <option disabled>Select Client</option>
+              </select>
+            </fieldset>
+            <fieldset className={styles.dropdownFieldset}>
+              <label htmlFor="testing-center-4">Testing Center 4</label>
+              <select name="testing-center-4">
+                <option disabled>Select Client</option>
+              </select>
+            </fieldset>
+          </section>
         </div>
       </Card>
     </div>
