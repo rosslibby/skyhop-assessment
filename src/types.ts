@@ -6,3 +6,10 @@ export type SelectOption = {
   name: string
   value: InputValue
 }
+
+export type RadioOption = {
+  id: string
+  label: string
+  value: InputValue
+  checked: boolean
+}
