@@ -20,37 +20,35 @@ function App() {
         title="Document Upload"
       >
         <div className={styles.formLeft}>
+          <Select
+            name="import-name"
+            onChange={() => null}
+            options={[
+              {
+                name: 'Select Import Name:',
+                default: true,
+                disabled: true,
+                value: 'none',
+              },
+            ]}
+          />
           <section>
-            <Select
-              name="import-name"
-              onChange={() => null}
-              options={[
-                {
-                  name: 'Select Import Name:',
-                  default: true,
-                  disabled: true,
-                  value: 'none',
-                },
-              ]}
-            />
-            <section>
-              <label htmlFor="uploader">Select a manifest that you'd like to import</label>
-              <input name="uploader" type="file" />
-            </section>
+            <label htmlFor="uploader">Select a manifest that you'd like to import</label>
+            <input name="uploader" type="file" />
+          </section>
 
-            <section>
-              <label>Elapse Data Checking:</label>
-              <p>No Elapsed Dates!</p>
-            </section>
+          <section>
+            <label>Elapse Data Checking:</label>
+            <p>No Elapsed Dates!</p>
+          </section>
 
-            <section>
-              <label htmlFor="tolerance">Tolerance Window:</label>
-              <input type="checkbox" name="tolerance" />
-              <span>{`Toggle ON`}</span>
-              <span>
-                <span>Select Tolerance Level</span>
-              </span>
-            </section>
+          <section>
+            <label htmlFor="tolerance">Tolerance Window:</label>
+            <input type="checkbox" name="tolerance" />
+            <span>{`Toggle ON`}</span>
+            <span>
+              <span>Select Tolerance Level</span>
+            </span>
           </section>
         </div>
 
