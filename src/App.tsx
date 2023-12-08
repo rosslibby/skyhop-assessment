@@ -75,6 +75,11 @@ function App() {
               ]}
             />
           </section>
+
+          <section>
+            <label>Location Checking:</label>
+            <p>All Available!</p>
+          </section>
         </div>
       </Card>
     </div>
