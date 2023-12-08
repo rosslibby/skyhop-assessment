@@ -2,6 +2,7 @@ import Card from 'components/card'
 import './App.css'
 import styles from './app.module.css'
 import { RadioGroup, Select } from 'components/input'
+import { Client, SplitSchedule } from 'sections'
 
 function App() {
   return (
@@ -54,78 +55,14 @@ function App() {
         </div>
 
         <div className={styles.formRight}>
-          <section>
-            <RadioGroup
-              onChange={() => null}
-              label="Split schedule using social distancing?"
-              name="split-schedule"
-              options={[
-                {
-                  id: 'yes',
-                  checked: true,
-                  label: 'Yes',
-                  value: 'yes',
-                },
-                {
-                  id: 'no',
-                  checked: false,
-                  label: 'No',
-                  value: 'no',
-                },
-              ]}
-            />
-          </section>
+          <SplitSchedule />
 
           <section>
             <label>Location Checking:</label>
             <p>All Available!</p>
           </section>
 
-          <section>
-            <RadioGroup
-              onChange={() => null}
-              label="Client:"
-              name="client"
-              options={[
-                {
-                  id: 'single',
-                  checked: true,
-                  label: 'Single',
-                  value: 'single',
-                },
-                {
-                  id: 'multiple',
-                  checked: false,
-                  label: 'Multiple',
-                  value: 'multiple',
-                },
-              ]}
-            />
-            <fieldset className={styles.dropdownFieldset}>
-              <label htmlFor="testing-center-1">Testing Center 1</label>
-              <select name="testing-center-1">
-                <option disabled>Select Client</option>
-              </select>
-            </fieldset>
-            <fieldset className={styles.dropdownFieldset}>
-              <label htmlFor="testing-center-2">Testing Center 2</label>
-              <select name="testing-center-2">
-                <option disabled>Select Client</option>
-              </select>
-            </fieldset>
-            <fieldset className={styles.dropdownFieldset}>
-              <label htmlFor="testing-center-3">Testing Center 3</label>
-              <select name="testing-center-3">
-                <option disabled>Select Client</option>
-              </select>
-            </fieldset>
-            <fieldset className={styles.dropdownFieldset}>
-              <label htmlFor="testing-center-4">Testing Center 4</label>
-              <select name="testing-center-4">
-                <option disabled>Select Client</option>
-              </select>
-            </fieldset>
-          </section>
+          <Client />
         </div>
       </Card>
     </div>
