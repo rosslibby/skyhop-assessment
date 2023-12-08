@@ -1,0 +1,13 @@
+.select {
+  border: none;
+  border-radius: 0.5rem;
+  border-right: 0.5rem solid #ffffff;
+  box-shadow: 0 0 0 1px var(--border--primary);
+  color: var(--color--primary);
+  font-family: Raleway, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -.25px;
+  padding: 0.5rem;
+  width: 100%;
+}
