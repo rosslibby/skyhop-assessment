@@ -1,0 +1,7 @@
+.label {
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -.25px;
+  padding-bottom: 0.8125rem;
+}
