@@ -32,6 +32,15 @@ function App() {
                 },
               ]}
             />
+            <section>
+              <label htmlFor="uploader">Select a manifest that you'd like to import</label>
+              <input name="uploader" type="file" />
+            </section>
+
+            <section>
+              <label>Elapse Data Checking:</label>
+              <p>No Elapsed Dates!</p>
+            </section>
           </section>
         </div>
 
