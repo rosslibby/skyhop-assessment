@@ -1,3 +1,43 @@
-.radio {
+.group {
+  border: none;
+  display: grid;
   margin: 0;
+  padding: 0;
+}
+
+.group legend {
+  padding: 0;
+  padding-bottom: 0.8125rem;
+}
+
+.inputs {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, min-content);
+}
+
+.radio {
+  display: none;
+}
+
+.radio + label {
+  display: flex;
+  font-weight: 400;
+}
+
+.radio:checked + label::before {
+  background-color: var(--color--primary);
+  box-shadow: 0 0 0 2px var(--color--primary);
+}
+
+.radio + label::before {
+  background-color: #ffffff;
+  border: 0.25rem solid #ffffff;
+  box-shadow: 0 0 0 2px var(--border--secondary);
+  border-radius: 1.875rem;
+  content: '';
+  display: block;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  width: 0.5rem;
 }
