@@ -2,7 +2,7 @@ import Card from 'components/card'
 import './App.css'
 import styles from './app.module.css'
 import { RadioGroup, Select } from 'components/input'
-import { Client, SplitSchedule } from 'sections'
+import { Client, FileUpload, SplitSchedule, ToleranceWindow } from 'sections'
 
 function App() {
   return (
@@ -32,24 +32,14 @@ function App() {
               },
             ]}
           />
-          <section>
-            <label htmlFor="uploader">Select a manifest that you'd like to import</label>
-            <input name="uploader" type="file" />
-          </section>
+          <FileUpload />
 
           <section>
             <label>Elapse Data Checking:</label>
             <p>No Elapsed Dates!</p>
           </section>
 
-          <section>
-            <label htmlFor="tolerance">Tolerance Window:</label>
-            <input type="checkbox" name="tolerance" />
-            <span>{`Toggle ON`}</span>
-            <span>
-              <span>Select Tolerance Level</span>
-            </span>
-          </section>
+          <ToleranceWindow />
         </div>
 
         <div className={styles.formRight}>
