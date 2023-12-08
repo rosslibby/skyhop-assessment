@@ -1,0 +1,32 @@
+.file {
+  border: 1px solid var(--border--primary);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 13px;
+}
+
+.label strong {
+  font-weight: 800;
+}
+
+.dropzone {
+  border: 1px dashed var(--border--primary);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 1.875rem;
+  transition: all .25s ease;
+  -webkit-transition: all .25s ease;
+}
+
+.dropzone:hover {
+  background-color: #1b3e7008;
+  border-color: #1b3e7024;
+  cursor: pointer;
+}
