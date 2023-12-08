@@ -1,7 +1,7 @@
 import Card from 'components/card'
 import './App.css'
 import styles from './app.module.css'
-import { Select } from 'components/input'
+import { RadioGroup, Select } from 'components/input'
 
 function App() {
   return (
@@ -53,7 +53,29 @@ function App() {
           </section>
         </div>
 
-        <div className={styles.formRight}></div>
+        <div className={styles.formRight}>
+          <section>
+            <RadioGroup
+              onChange={() => null}
+              label="Split schedule using social distancing?"
+              name="split-schedule"
+              options={[
+                {
+                  id: 'yes',
+                  checked: true,
+                  label: 'Yes',
+                  value: 'yes',
+                },
+                {
+                  id: 'no',
+                  checked: false,
+                  label: 'No',
+                  value: 'no',
+                },
+              ]}
+            />
+          </section>
+        </div>
       </Card>
     </div>
   )
