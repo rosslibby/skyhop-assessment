@@ -2,7 +2,7 @@ import Card from 'components/card'
 import './App.css'
 import styles from './app.module.css'
 import { RadioGroup, Select } from 'components/input'
-import { Client, FileUpload, SplitSchedule, ToleranceWindow } from 'sections'
+import { Client, FileUpload, ImportName, SplitSchedule, ToleranceWindow } from 'sections'
 
 function App() {
   return (
@@ -20,18 +20,7 @@ function App() {
         title="Document Upload"
       >
         <div className={styles.formLeft}>
-          <Select
-            name="import-name"
-            onChange={() => null}
-            options={[
-              {
-                name: 'Select Import Name:',
-                default: true,
-                disabled: true,
-                value: 'none',
-              },
-            ]}
-          />
+          <ImportName />
           <FileUpload />
 
           <section>
