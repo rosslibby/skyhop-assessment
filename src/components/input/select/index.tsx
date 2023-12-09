@@ -1,13 +1,13 @@
 import { ChangeEvent, useState } from 'react'
 import styles from './select.module.css'
-import { InputValue, SelectOption } from 'types'
+import { SelectOption } from './types'
 
 export const Select = ({ name, onChange, options }: {
   name: string
   onChange: (value: string) => void
   options: SelectOption[]
 }) => {
-  const [value, setValue] = useState<InputValue | undefined>(
+  const [value, setValue] = useState<string | number | undefined>(
     options.find((option: SelectOption) => option.default)?.value
   )
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
