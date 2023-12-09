@@ -4,7 +4,7 @@ import styles from './form.module.css'
 export const Fieldset = ({ children }: {
   children: ReactNode
 }) => (
-  <fieldset className={styles.fieldset}>
+  <fieldset className={styles.dropdownFieldset}>
     {children}
   </fieldset>
 )

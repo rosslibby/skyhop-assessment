@@ -2,11 +2,16 @@ import { ChangeEvent, useState } from 'react'
 import styles from './select.module.css'
 import { SelectOption } from './types'
 
-export const Select = ({ name, onChange, options }: {
+export const Select = ({ className, name, onChange, options }: {
+  className?: string
   name: string
   onChange: (value: string) => void
   options: SelectOption[]
 }) => {
+  const classnames = [
+    styles.select,
+    ...(className ? [className] : []),
+  ].join(' ')
   const [value, setValue] = useState<string | number | undefined>(
     options.find((option: SelectOption) => option.default)?.value
   )
@@ -18,7 +23,7 @@ export const Select = ({ name, onChange, options }: {
 
   return (
     <select
-      className={styles.select}
+      className={classnames}
       defaultValue={value}
       name={name}
       onChange={handleChange}
