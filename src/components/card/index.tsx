@@ -2,6 +2,7 @@ import styles from './card.module.css'
 import { ReactNode } from 'react'
 import Header from './header'
 import Footer from './footer'
+import { Button } from 'components/buttons'
 
 type Action = {
   label: string
@@ -39,10 +40,10 @@ export default function Card({
         )}
         <div className={styles.footerButtons}>
           {action && (
-            <button onClick={action.onClick}>{action?.label}</button>
+            <Button onClick={action.onClick}>{action?.label}</Button>
           )}
           {dismiss && (
-            <button onClick={dismiss.onClick}>{dismiss?.label}</button>
+            <Button primary={false} onClick={dismiss.onClick}>{dismiss?.label}</Button>
           )}
         </div>
       </Footer>
