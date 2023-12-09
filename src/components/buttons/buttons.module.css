@@ -1,0 +1,21 @@
+.button {
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  height: 2.875rem;
+  width: 14.875rem;
+}
+
+.primary {
+  background-color: var(--color--primary);
+  border: 2px solid var(--color--primary);
+  color: #ffffff;
+}
+
+.secondary {
+  background-color: transparent;
+  border: 2px solid var(--color--warning);
+  color: var(--color--warning);
+}
+
