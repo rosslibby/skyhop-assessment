@@ -7,6 +7,10 @@
   width: 14.875rem;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .primary {
   background-color: var(--color--primary);
   border: 2px solid var(--color--primary);
