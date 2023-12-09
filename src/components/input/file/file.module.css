@@ -24,8 +24,8 @@
   box-sizing: border-box;
   display: grid;
   gap: 1.125rem;
-  justify-content: center;
   padding: 1.875rem;
+  text-align: center;
   transition: all .25s ease;
   width: 100%;
   -webkit-transition: all .25s ease;
@@ -38,9 +38,7 @@
 }
 
 .icon {
-  height: 1.25rem;
-  stroke: var(--color--warning);
-  width: 100%;
+  color: var(--color--warning);
 }
 
 .button {
