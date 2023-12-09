@@ -1,15 +1,21 @@
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import styles from './file.module.css'
 import { Button } from 'components/buttons'
 
-export const File = ({ action }: {
+export const File = ({ action, upload }: {
   action: {
     label: string
-    onClick: () => void
+    onClick: (file: File) => void
   }
+  upload: () => void
 }) => {
-  const onDrop = useCallback((acceptedFiles: File[]) => {}, [])
+  const [file, setFile] = useState<File | undefined>()
+  const onDrop = useCallback((acceptedFiles: File[]) => {
+    const file = acceptedFiles[0]
+    setFile(file)
+    action.onClick(file)
+  }, [])
   const {
     getInputProps,
     getRootProps,
@@ -33,7 +39,8 @@ export const File = ({ action }: {
       </div>
       <Button
         className={styles.button}
-        onClick={action.onClick}
+        disabled={!file}
+        onClick={upload}
       >{action.label}</Button>
     </div>
   )
