@@ -8,46 +8,50 @@ import {
   SplitSchedule,
   ToleranceWindow,
 } from 'sections'
+import { Label } from 'components/input'
+import { FormProvider } from 'context'
 
 function App() {
   return (
-    <div className="App">
-      <Card
-        action={{
-          label: 'Continue Import',
-          onClick: () => null,
-        }}
-        dismiss={{
-          label: 'Cancel',
-          onClick: () => null,
-        }}
-        summary="Data in the import file is correct. Please press Continue to import."
-        title="Document Upload"
-      >
-        <div className={styles.formLeft}>
-          <ImportName />
-          <FileUpload />
+    <FormProvider>
+      <div className="App">
+        <Card
+          action={{
+            label: 'Continue Import',
+            onClick: () => null,
+          }}
+          dismiss={{
+            label: 'Cancel',
+            onClick: () => null,
+          }}
+          summary="Data in the import file is correct. Please press Continue to import."
+          title="Document Upload"
+        >
+          <div className={styles.formLeft}>
+            <ImportName />
+            <FileUpload />
 
-          <section>
-            <label>Elapse Data Checking:</label>
-            <p>No Elapsed Dates!</p>
-          </section>
+            <section>
+              <Label>Elapse Data Checking:</Label>
+              <p>No Elapsed Dates!</p>
+            </section>
 
-          <ToleranceWindow />
-        </div>
+            <ToleranceWindow />
+          </div>
 
-        <div className={styles.formRight}>
-          <SplitSchedule />
+          <div className={styles.formRight}>
+            <SplitSchedule />
 
-          <section>
-            <label>Location Checking:</label>
-            <p>All Available!</p>
-          </section>
+            <section>
+              <Label>Location Checking:</Label>
+              <p>All Available!</p>
+            </section>
 
-          <Client />
-        </div>
-      </Card>
-    </div>
+            <Client />
+          </div>
+        </Card>
+      </div>
+    </FormProvider>
   )
 }
 
