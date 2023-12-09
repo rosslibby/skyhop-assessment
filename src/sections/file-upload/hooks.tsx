@@ -15,7 +15,6 @@ export const useFileProcessor = () => {
   }, [])
 
   const upload = useCallback(async () => {
-    console.log('upload file', file)
     let i = 0;
     setUploading(true)
     const timer = setInterval(() => {
