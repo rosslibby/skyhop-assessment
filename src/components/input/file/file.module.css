@@ -18,7 +18,8 @@
   border: 1px dashed var(--border--primary);
   border-radius: 0.25rem;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  gap: 1.125rem;
   justify-content: center;
   padding: 1.875rem;
   transition: all .25s ease;
@@ -29,4 +30,10 @@
   background-color: #1b3e7008;
   border-color: #1b3e7024;
   cursor: pointer;
+}
+
+.icon {
+  height: 1.25rem;
+  stroke: var(--color--warning);
+  width: 100%;
 }
