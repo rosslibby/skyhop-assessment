@@ -19,6 +19,9 @@ export const ToleranceWindow = () => {
           onChange={onChange}
         />
         <span className={styles.text}>
+          <span className={`material-icons ${styles.icon}`}>
+            schedule
+          </span>
           <span>Select Tolerance Level</span>
         </span>
       </div>
