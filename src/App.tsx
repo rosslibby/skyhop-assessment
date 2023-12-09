@@ -1,6 +1,5 @@
 import Card from 'components/card'
 import './App.css'
-import styles from './app.module.css'
 import {
   Client,
   FileUpload,
@@ -27,7 +26,7 @@ function App() {
           summary="Data in the import file is correct. Please press Continue to import."
           title="Document Upload"
         >
-          <div className={styles.formLeft}>
+          <div>
             <ImportName />
             <FileUpload />
 
@@ -39,7 +38,7 @@ function App() {
             <ToleranceWindow />
           </div>
 
-          <div className={styles.formRight}>
+          <div>
             <SplitSchedule />
 
             <section>
