@@ -16,13 +16,12 @@ export const SplitSchedule = () => {
         options={[
           {
             id: 'yes',
-            checked: true,
+            default: true,
             label: 'Yes',
             value: 'yes',
           },
           {
             id: 'no',
-            checked: false,
             label: 'No',
             value: 'no',
           },
