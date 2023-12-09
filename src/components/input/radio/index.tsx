@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
 import styles from './radio.module.css'
-import { RadioOption } from 'types'
+import { RadioOption } from './types'
 import { Label } from '../label'
 
 export const RadioGroup = ({ label, name, onChange, options }: {
