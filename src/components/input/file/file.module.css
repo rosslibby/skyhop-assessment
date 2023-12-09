@@ -2,6 +2,10 @@
   border: 1px solid var(--border--primary);
   border-radius: 0.5rem;
   box-sizing: border-box;
+  display: grid;
+  gap: 13px;
+  grid-template-columns: 1fr;
+  justify-content: center;
   padding: 1rem;
   width: 100%;
 }
@@ -23,6 +27,7 @@
   justify-content: center;
   padding: 1.875rem;
   transition: all .25s ease;
+  width: 100%;
   -webkit-transition: all .25s ease;
 }
 
@@ -36,4 +41,13 @@
   height: 1.25rem;
   stroke: var(--color--warning);
   width: 100%;
+}
+
+.button {
+  align-items: center;
+  border-radius: 0.25rem;
+  display: grid;
+  height: 2rem;
+  justify-self: center;
+  width: 12.625rem;
 }

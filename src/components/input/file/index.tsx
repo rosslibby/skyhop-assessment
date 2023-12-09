@@ -2,6 +2,7 @@ import { useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
 import styles from './file.module.css'
 import { DocumentIcon } from 'assets/icons'
+import { Button } from 'components/buttons'
 
 export const File = () => {
   const onDrop = useCallback((acceptedFiles: File[]) => {}, [])
@@ -23,6 +24,7 @@ export const File = () => {
           : (<span className={styles.label}>Drag &amp; Drop Here Or <strong>Browse</strong></span>)
         }
       </div>
+      <Button className={styles.button} onClick={() => null}>Upload Manifest</Button>
     </div>
   )
 }
