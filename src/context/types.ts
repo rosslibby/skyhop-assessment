@@ -1,5 +1,3 @@
-import { InputValue } from 'types'
-
 export enum FieldType {
   select,
   radio,
