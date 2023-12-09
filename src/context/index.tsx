@@ -17,9 +17,11 @@ export const formContext = createContext<Form>({
     },
     'split-schedule': {
       valid: true,
+      value: 'yes',
     },
     'client': {
-      valid: true
+      valid: true,
+      value: 'single',
     },
     'testing-centers': {
       valid: false,
