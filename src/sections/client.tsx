@@ -1,23 +1,28 @@
 import { Fieldset } from 'components/form'
 import { Label, RadioGroup } from 'components/input'
+import { useForm } from 'context/hooks'
+import { ChangeEvent } from 'react'
 
 export const Client = () => {
+  const { updateField } = useForm('client')
+  const onChange = (e: ChangeEvent<HTMLInputElement>) =>
+    updateField(e.target.value, e.target.value !== undefined)
+
   return (
     <section>
       <RadioGroup
-        onChange={() => null}
+        onChange={onChange}
         label="Client:"
         name="client"
         options={[
           {
             id: 'single',
-            checked: true,
+            default: true,
             label: 'Single',
             value: 'single',
           },
           {
             id: 'multiple',
-            checked: false,
             label: 'Multiple',
             value: 'multiple',
           },
