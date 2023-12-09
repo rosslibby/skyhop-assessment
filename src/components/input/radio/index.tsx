@@ -21,6 +21,7 @@ export const RadioGroup = ({ label, name, onChange, options }: {
               className={styles.radio}
               id={`${name}-${option.value}`}
               name={name}
+              defaultChecked={option.default}
               onChange={onChange}
               type="radio"
               value={option.value}
