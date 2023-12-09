@@ -1,0 +1,48 @@
+.progressSection {
+  align-items: center;
+  border-bottom: 1px solid var(--border--light);
+  border-top: 1px solid var(--border--light);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 15fr;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.icon {
+  color: var(--color--warning);
+}
+
+.info {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.data {
+  align-items: flex-end;
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.name {
+  color: var(--color--light);
+}
+
+.size {
+  color: var(--color--primary);
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.loadingWrapper {
+  background-color: var(--border--light);
+  border-radius: 0.125rem;
+  height: 3px;
+  width: 100%;
+}
+
+.loadingFill {
+  background-color: var(--color--warning);
+  height: 100%;
+}
