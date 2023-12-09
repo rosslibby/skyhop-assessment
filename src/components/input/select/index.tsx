@@ -4,7 +4,7 @@ import { InputValue, SelectOption } from 'types'
 
 export const Select = ({ name, onChange, options }: {
   name: string
-  onChange: (value: InputValue) => void
+  onChange: (value: string) => void
   options: SelectOption[]
 }) => {
   const [value, setValue] = useState<InputValue | undefined>(
