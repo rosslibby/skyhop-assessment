@@ -11,5 +11,5 @@ export type RadioOption = {
   id: string
   label: string
   value: InputValue
-  checked: boolean
+  default?: boolean
 }
