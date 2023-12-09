@@ -5,11 +5,11 @@ export enum FieldType {
   file,
 }
 
-export type Value = string | boolean | number | File
+export type Value = string | string[] | boolean | number | File
 
 export interface Field {
   valid: boolean
-  value?: string | boolean | File | number
+  value?: Value
 }
 
 export interface Fields {
