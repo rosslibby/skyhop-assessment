@@ -40,10 +40,10 @@ export default function Card({
         )}
         <div className={styles.footerButtons}>
           {action && (
-            <Button onClick={action.onClick}>{action?.label}</Button>
+            <Button className={styles.footerButton} onClick={action.onClick}>{action?.label}</Button>
           )}
           {dismiss && (
-            <Button primary={false} onClick={dismiss.onClick}>{dismiss?.label}</Button>
+            <Button className={styles.footerButton} primary={false} onClick={dismiss.onClick}>{dismiss?.label}</Button>
           )}
         </div>
       </Footer>
