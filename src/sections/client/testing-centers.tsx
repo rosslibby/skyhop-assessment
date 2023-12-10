@@ -169,6 +169,9 @@ export default function TestingCenters({ client }: {
             ...centers,
           ]}
         />
+        <span className={`material-icons ${styles.icon}`}>
+          schedule
+        </span>
       </Fieldset>
     )
     : (
@@ -190,6 +193,9 @@ export default function TestingCenters({ client }: {
                 ...centers,
               ]}
             />
+            <span className={`material-icons ${styles.icon}`}>
+              schedule
+            </span>
           </Fieldset>
         ))}
       </>
