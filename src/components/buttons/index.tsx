@@ -15,9 +15,9 @@ export const Button = ({
   primary?: boolean
 }) => {
   const classnames = [
+    ...(className ? [className] : []),
     styles.button,
     primary ? styles.primary : styles.secondary,
-    ...(className ? [className] : []),
   ].join(' ')
 
   return (
