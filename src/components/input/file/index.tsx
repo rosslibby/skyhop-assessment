@@ -3,11 +3,12 @@ import { useDropzone } from 'react-dropzone'
 import styles from './file.module.css'
 import { Button } from 'components/buttons'
 
-export const File = ({ action, upload }: {
+export const File = ({ action, filename, upload }: {
   action: {
     label: string
     onClick: (file: File) => void
   }
+  filename?: string
   upload: () => void
 }) => {
   const [file, setFile] = useState<File | undefined>()
@@ -34,7 +35,14 @@ export const File = ({ action, upload }: {
 
         {isDragActive
           ? (<span className={styles.label}>Drop File Here</span>)
-          : (<span className={styles.label}>Drag &amp; Drop Here Or <strong>Browse</strong></span>)
+          : (<span className={styles.label}>{
+              filename
+                ? (<>{filename}</>)
+                : (
+                  <>
+                    Drag &amp; Drop Here Or <strong>Browse</strong>
+                  </>
+                )}</span>)
         }
       </div>
       <Button

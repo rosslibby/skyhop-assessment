@@ -22,6 +22,7 @@ export const FileUpload = () => {
           label: 'Upload Manifest',
           onClick: (file: File) => processFile(file),
         }}
+        filename={filename.length ? filename : undefined}
         upload={upload}
       />
 
